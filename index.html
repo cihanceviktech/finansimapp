@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f6fa"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Finansım"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><title>Finansım v6.1.1</title>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7f3fb"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Finansım"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><title>Finansım v6.1.2</title>
 <style>
 :root{--bg:#f5f6fa;--card:rgba(255,255,255,.88);--ink:#1d1d1f;--muted:#777982;--line:#e7e9ef;--blue:#e7f1ff;--green:#e6f7ef;--pink:#fdebf2;--lav:#eeeaff;--amber:#fff3d7;--red:#c74848;--shadow:0 16px 48px rgba(25,30,45,.075)}
 *{box-sizing:border-box}html{background:var(--bg)}body{margin:0;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",system-ui,sans-serif;background:radial-gradient(circle at 8% 0,#eaf4ff,transparent 29%),radial-gradient(circle at 94% 1%,#f4ebff,transparent 27%),var(--bg);min-height:100vh}button,input,select{font:inherit}.app{max-width:1080px;margin:auto;padding:calc(18px + env(safe-area-inset-top)) 14px calc(102px + env(safe-area-inset-bottom))}
@@ -126,8 +126,98 @@ body.privacy .privacyLabel:after{content:" · Tutarlar gizli"}
  .bottom button:nth-child(1).active{background:#203246;color:#9fc9f2}.bottom button:nth-child(2).active{background:#432a34;color:#e4adbf}.bottom button:nth-child(3).active{background:#20372b;color:#9cd4b0}.bottom button:nth-child(4).active{background:#312b43;color:#c6baf0}.bottom button:nth-child(5).active{background:#403821;color:#e2ce92}
  .btn{background:#203246;color:#a9cff4}.btn.alt{background:#312b43;color:#cabef2}.btn.soft{background:#2b2b30;color:#d7d7dc}
 }
+
+/* v6.1.2 — pastel-only theme, no black surfaces */
+:root{
+ --bg:#f7f3fb;--card:rgba(255,255,255,.9);--ink:#34323a;--muted:#7e7888;
+ --ios-bg:#f7f3fb;--ios-surface:rgba(255,255,255,.9);--ios-surface-solid:#fff;
+ --ios-label:#34323a;--ios-secondary:#7e7888;--ios-separator:rgba(91,78,110,.10);
+ --ios-shadow:0 10px 30px rgba(106,91,137,.08);
+}
+html,body{background:
+ radial-gradient(circle at 10% 0,#eaf4ff 0,transparent 30%),
+ radial-gradient(circle at 95% 5%,#f4eaff 0,transparent 32%),
+ radial-gradient(circle at 50% 100%,#ebf8f2 0,transparent 34%),
+ #f7f3fb!important;color:#34323a!important}
+.appmark{background:linear-gradient(145deg,#d9ebff,#eadfff)!important;color:#5f6f9c!important}
+.roundAction{background:#eee8fb!important;color:#7769a5!important}
+.tabs{background:rgba(255,255,255,.72)!important}
+.iosMainMetric{
+ background:linear-gradient(145deg,#e6f1ff,#f0e8ff)!important;
+ color:#3f4653!important;
+ box-shadow:0 12px 30px rgba(101,111,150,.10)!important
+}
+.iosMainMetric .label,.iosMainMetric .mini{color:#72798a!important}
+.balance{
+ background:linear-gradient(145deg,#e5f3ff,#e9f8ef)!important;
+ color:#405160!important;border:1px solid rgba(95,130,160,.08)!important
+}
+.balance .label,.balance .mini{color:#748390!important}
+.wealthHero{
+ background:linear-gradient(145deg,#eee8ff,#e7f4ff)!important;
+ color:#45415a!important
+}
+.wealthHero .label,.wealthHero .sub{color:#77718a!important}
+.bankCard{
+ background:linear-gradient(145deg,#e6f2ff,#ece8ff)!important;
+ color:#41465a!important;
+ box-shadow:0 10px 26px rgba(92,101,135,.10)!important
+}
+.bankCard:nth-child(2n){
+ background:linear-gradient(145deg,#e8f8ef,#e7f5f7)!important
+}
+.bankCard:nth-child(3n){
+ background:linear-gradient(145deg,#fdebf3,#fff1e5)!important
+}
+.bankCard .label,.bankCard .meta,.bankCard.light .label,.bankCard.light .meta{color:#777d8c!important}
+.bankCard.light{color:#41465a!important}
+.bankCard .utilTrack,.bankCard.light .utilTrack{background:rgba(88,104,140,.10)!important}
+.bankCard .utilTrack>div{background:linear-gradient(90deg,#91bff0,#b3a5e7)!important}
+.bankCard .cardButtons button{background:rgba(255,255,255,.72)!important;color:#5d6480!important}
+.actionNo{background:#e9e3f7!important;color:#6e6297!important}
+.actionItem.high .actionNo{background:#fde8ea!important;color:#a75e68!important}
+.actionItem.med .actionNo{background:#fff1df!important;color:#9a713d!important}
+.actionItem.low .actionNo{background:#e6f6ec!important;color:#4c8060!important}
+.btn{background:#e7f2ff!important;color:#4d7198!important}
+.btn.alt{background:#eee8fb!important;color:#7165a0!important}
+.btn.soft{background:#f1eff5!important;color:#66616e!important}
+.bottom{background:rgba(255,255,255,.90)!important}
+.bottom button{color:#8b8494!important}
+.bottom button:nth-child(1).active{background:#e8f3ff!important;color:#4977a5!important}
+.bottom button:nth-child(2).active{background:#fdebf3!important;color:#a75d79!important}
+.bottom button:nth-child(3).active{background:#e8f8ef!important;color:#3f7d5c!important}
+.bottom button:nth-child(4).active{background:#f0ecff!important;color:#7167a6!important}
+.bottom button:nth-child(5).active{background:#fff6da!important;color:#94732f!important}
+.healthScore{background:conic-gradient(#9bd7b0 var(--health),#eeeaf3 0)!important}
+.healthScore:before{background:#fff!important}
+
+/* Keep the same pastel palette even when iPhone is in Dark Appearance */
+@media(prefers-color-scheme:dark){
+ :root{--ios-bg:#f7f3fb;--ios-surface:rgba(255,255,255,.9);--ios-surface-solid:#fff;--ios-label:#34323a;--ios-secondary:#7e7888;--ios-separator:rgba(91,78,110,.10);--ios-shadow:0 10px 30px rgba(106,91,137,.08)}
+ html,body{background:
+  radial-gradient(circle at 10% 0,#eaf4ff 0,transparent 30%),
+  radial-gradient(circle at 95% 5%,#f4eaff 0,transparent 32%),
+  radial-gradient(circle at 50% 100%,#ebf8f2 0,transparent 34%),
+  #f7f3fb!important;color:#34323a!important}
+ .card,.kpi:nth-child(n),.quick{background:rgba(255,255,255,.90)!important;border-color:rgba(91,78,110,.10)!important;color:#34323a!important}
+ input,select{background:#fff!important;color:#34323a!important;border-color:rgba(91,78,110,.12)!important}
+ .tabs{background:rgba(255,255,255,.72)!important}
+ .tab:nth-child(1){background:#e8f3ff!important;color:#4977a5!important}
+ .tab:nth-child(2){background:#e8f8ef!important;color:#3f7d5c!important}
+ .tab:nth-child(3){background:#f0ecff!important;color:#7167a6!important}
+ .tab:nth-child(4){background:#fff0e5!important;color:#9b6a43!important}
+ .tab:nth-child(5){background:#fdebf3!important;color:#a75d79!important}
+ .tab:nth-child(6){background:#e7f7f8!important;color:#4f8186!important}
+ .tab:nth-child(7){background:#fff6da!important;color:#94732f!important}
+ .tab:nth-child(8){background:#f8eaf0!important;color:#996174!important}
+ .tab:nth-child(9){background:#eaf6ff!important;color:#567b9e!important}
+ .tab:nth-child(10){background:#f1edfa!important;color:#74678e!important}
+ .bottom{background:rgba(255,255,255,.90)!important;border-color:rgba(91,78,110,.08)!important}
+ .versionBadge{background:#eeeaf3!important;color:#77718a!important}
+ .ccMetric,.subMetric,.actionItem{background:#faf8fc!important;border-color:rgba(91,78,110,.08)!important}
+}
 </style></head><body><div id="recoveryScreen" class="recovery hidden"><div class="recoverybox"><div class="title">Veri Kurtarma</div><div class="sub">Bu cihazda finans verisi bulunamadı. Eski tarayıcı kaydını tarayabilir veya kurtarma kodunu yapıştırabilirsin.</div><textarea id="recoveryCode" placeholder="Kurtarma kodunu buraya yapıştır"></textarea><div class="recoveryActions"><button class="btn alt" id="scanLegacyBtn">Eski veriyi tara</button><button class="btn" id="applyRecoveryBtn">Kodu uygula</button></div><div id="recoveryMsg" class="recoveryMsg"></div></div></div><div id="lockScreen" class="lock hidden"><div class="lockbox"><div class="lockicon">🔒</div><div class="title" id="lockTitle">Finansım Kilitli</div><div class="sub" id="lockSub">PIN kodunu gir.</div><input id="pinInput" class="pin" type="password" inputmode="numeric" maxlength="8" autocomplete="off" placeholder="••••"><button class="btn" id="unlockBtn" style="width:100%">Aç</button><button class="btn alt hidden" id="biometricUnlockBtn" style="width:100%;margin-top:8px">Face ID / Passkey ile Aç</button><div id="lockMsg" class="mini neg"></div></div></div><div class="app">
-<header class="iosHeader"><div><div class="brand">Finansım <span class="badge versionBadge">v6.1.1</span></div><div class="date privacyLabel" id="today"></div></div><div class="headerActions"><button class="roundAction" id="privacyBtn" data-ico="eye" title="Tutarları gizle"></button><div class="appmark" id="appMark"></div></div></header>
+<header class="iosHeader"><div><div class="brand">Finansım <span class="badge versionBadge">v6.1.2</span></div><div class="date privacyLabel" id="today"></div></div><div class="headerActions"><button class="roundAction" id="privacyBtn" data-ico="eye" title="Tutarları gizle"></button><div class="appmark" id="appMark"></div></div></header>
 <div class="tabs"><button class="tab active" data-tab="home">Özet</button><button class="tab" data-tab="cashflow">90 Gün</button><button class="tab" data-tab="lab">What-if</button><button class="tab" data-tab="strategy">Strateji</button><button class="tab" data-tab="wealth">Net Değer</button><button class="tab" data-tab="analytics">Analiz</button><button class="tab" data-tab="plan">Plan</button><button class="tab" data-tab="debts">Borçlar</button><button class="tab" data-tab="flow">Hareketler</button><button class="tab" data-tab="settings">Ayarlar</button></div>
 
 
