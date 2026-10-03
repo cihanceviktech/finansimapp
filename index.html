@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f6fa"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Finansım"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><title>Finansım v6.1</title>
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f6fa"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Finansım"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><title>Finansım v6.1.1</title>
 <style>
 :root{--bg:#f5f6fa;--card:rgba(255,255,255,.88);--ink:#1d1d1f;--muted:#777982;--line:#e7e9ef;--blue:#e7f1ff;--green:#e6f7ef;--pink:#fdebf2;--lav:#eeeaff;--amber:#fff3d7;--red:#c74848;--shadow:0 16px 48px rgba(25,30,45,.075)}
 *{box-sizing:border-box}html{background:var(--bg)}body{margin:0;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",system-ui,sans-serif;background:radial-gradient(circle at 8% 0,#eaf4ff,transparent 29%),radial-gradient(circle at 94% 1%,#f4ebff,transparent 27%),var(--bg);min-height:100vh}button,input,select{font:inherit}.app{max-width:1080px;margin:auto;padding:calc(18px + env(safe-area-inset-top)) 14px calc(102px + env(safe-area-inset-bottom))}
@@ -79,8 +79,55 @@ body.privacy .privacyLabel:after{content:" · Tutarlar gizli"}
 .actionPlan{display:grid;gap:8px;margin-top:10px}.actionItem{display:grid;grid-template-columns:32px 1fr;gap:9px;padding:11px;border-radius:17px;background:#f7f8fb;border:1px solid #eef0f4}.actionNo{width:32px;height:32px;border-radius:11px;display:grid;place-items:center;background:#111;color:#fff;font-weight:800;font-size:11px}.actionItem.high .actionNo{background:#c94d45}.actionItem.med .actionNo{background:#b57b27}.actionItem.low .actionNo{background:#2f8057}.actionTitle{font-size:11px;font-weight:800}.actionText{font-size:9.5px;color:var(--ios-secondary);margin-top:3px;line-height:1.45}
 @media(max-width:760px){.cardCenterSummary{grid-template-columns:1fr 1fr}.cardWallet{grid-template-columns:1fr}.wealthGrid{grid-template-columns:1fr}.subscriptionSummary{grid-template-columns:1fr 1fr}.subscriptionSummary .subMetric:last-child{grid-column:span 2}.wealthValue{font-size:34px}}
 @media(prefers-color-scheme:dark){.ccMetric,.subMetric,.actionItem{background:#1c1c1e;border-color:#343438}.bankCard.light{background:linear-gradient(145deg,#25272d,#363943);color:#fff}.bankCard.light .label,.bankCard.light .meta{color:#aaaeb4}.subTag{background:#2c2c2e}.subTag.essential{background:#173728;color:#79dba4}.subTag.optional{background:#3a2c18;color:#ffc46b}}
+
+/* v6.1.1 pastel navigation correction */
+:root{
+ --pastel-blue:#e8f3ff;--pastel-blue-ink:#4977a5;
+ --pastel-mint:#e8f8ef;--pastel-mint-ink:#3f7d5c;
+ --pastel-lilac:#f0ecff;--pastel-lilac-ink:#7167a6;
+ --pastel-pink:#fdebf3;--pastel-pink-ink:#a75d79;
+ --pastel-peach:#fff0e5;--pastel-peach-ink:#9b6a43;
+ --pastel-yellow:#fff6da;--pastel-yellow-ink:#94732f;
+ --pastel-cyan:#e7f7f8;--pastel-cyan-ink:#4f8186;
+}
+.appmark{background:linear-gradient(145deg,#cfe5ff,#e9ddff);color:#516d99;box-shadow:0 8px 22px rgba(111,126,174,.16)}
+.roundAction{background:var(--pastel-lilac);color:var(--pastel-lilac-ink)}
+.tabs{background:rgba(255,255,255,.72)}
+.tab{border:1px solid transparent}
+.tab:nth-child(1){background:var(--pastel-blue);color:var(--pastel-blue-ink)}
+.tab:nth-child(2){background:var(--pastel-mint);color:var(--pastel-mint-ink)}
+.tab:nth-child(3){background:var(--pastel-lilac);color:var(--pastel-lilac-ink)}
+.tab:nth-child(4){background:var(--pastel-peach);color:var(--pastel-peach-ink)}
+.tab:nth-child(5){background:var(--pastel-pink);color:var(--pastel-pink-ink)}
+.tab:nth-child(6){background:var(--pastel-cyan);color:var(--pastel-cyan-ink)}
+.tab:nth-child(7){background:var(--pastel-yellow);color:var(--pastel-yellow-ink)}
+.tab:nth-child(8){background:#f8eaf0;color:#996174}
+.tab:nth-child(9){background:#eaf6ff;color:#567b9e}
+.tab:nth-child(10){background:#f1edfa;color:#74678e}
+.tab.active{box-shadow:0 4px 12px rgba(70,78,96,.10);border-color:rgba(255,255,255,.9);filter:saturate(1.08) brightness(.98)}
+.bottom{background:rgba(252,252,254,.92)}
+.bottom button{color:#8b8b92;transition:background .16s ease,color .16s ease,transform .16s ease}
+.bottom button:nth-child(1).active{background:var(--pastel-blue);color:var(--pastel-blue-ink)}
+.bottom button:nth-child(2).active{background:var(--pastel-pink);color:var(--pastel-pink-ink)}
+.bottom button:nth-child(3).active{background:var(--pastel-mint);color:var(--pastel-mint-ink)}
+.bottom button:nth-child(4).active{background:var(--pastel-lilac);color:var(--pastel-lilac-ink)}
+.bottom button:nth-child(5).active{background:var(--pastel-yellow);color:var(--pastel-yellow-ink)}
+.btn{background:var(--pastel-blue);color:#355f89}
+.btn.alt{background:var(--pastel-lilac);color:#665d98}
+.btn.soft{background:#f2f3f7;color:#62636a}
+.btn.dangerbtn{background:#fdebed;color:#9a4d56}
+@media(prefers-color-scheme:dark){
+ .appmark{background:linear-gradient(145deg,#32465f,#4b4165);color:#d5e6ff}
+ .roundAction{background:#302b3e;color:#cfc6f5}
+ .tabs{background:rgba(28,28,30,.82)}
+ .tab:nth-child(1){background:#203246;color:#9fc9f2}.tab:nth-child(2){background:#20372b;color:#9cd4b0}.tab:nth-child(3){background:#312b43;color:#c6baf0}.tab:nth-child(4){background:#3e3026;color:#e2bb99}.tab:nth-child(5){background:#432a34;color:#e4adbf}.tab:nth-child(6){background:#23383b;color:#a5d3d5}.tab:nth-child(7){background:#403821;color:#e2ce92}.tab:nth-child(8){background:#3f2933;color:#d5a6b6}.tab:nth-child(9){background:#233544;color:#aac8de}.tab:nth-child(10){background:#302b3a;color:#c1b4d2}
+ .tab.active{border-color:rgba(255,255,255,.10);filter:brightness(1.12)}
+ .bottom{background:rgba(24,24,27,.93)}
+ .bottom button:nth-child(1).active{background:#203246;color:#9fc9f2}.bottom button:nth-child(2).active{background:#432a34;color:#e4adbf}.bottom button:nth-child(3).active{background:#20372b;color:#9cd4b0}.bottom button:nth-child(4).active{background:#312b43;color:#c6baf0}.bottom button:nth-child(5).active{background:#403821;color:#e2ce92}
+ .btn{background:#203246;color:#a9cff4}.btn.alt{background:#312b43;color:#cabef2}.btn.soft{background:#2b2b30;color:#d7d7dc}
+}
 </style></head><body><div id="recoveryScreen" class="recovery hidden"><div class="recoverybox"><div class="title">Veri Kurtarma</div><div class="sub">Bu cihazda finans verisi bulunamadı. Eski tarayıcı kaydını tarayabilir veya kurtarma kodunu yapıştırabilirsin.</div><textarea id="recoveryCode" placeholder="Kurtarma kodunu buraya yapıştır"></textarea><div class="recoveryActions"><button class="btn alt" id="scanLegacyBtn">Eski veriyi tara</button><button class="btn" id="applyRecoveryBtn">Kodu uygula</button></div><div id="recoveryMsg" class="recoveryMsg"></div></div></div><div id="lockScreen" class="lock hidden"><div class="lockbox"><div class="lockicon">🔒</div><div class="title" id="lockTitle">Finansım Kilitli</div><div class="sub" id="lockSub">PIN kodunu gir.</div><input id="pinInput" class="pin" type="password" inputmode="numeric" maxlength="8" autocomplete="off" placeholder="••••"><button class="btn" id="unlockBtn" style="width:100%">Aç</button><button class="btn alt hidden" id="biometricUnlockBtn" style="width:100%;margin-top:8px">Face ID / Passkey ile Aç</button><div id="lockMsg" class="mini neg"></div></div></div><div class="app">
-<header class="iosHeader"><div><div class="brand">Finansım <span class="badge versionBadge">v6.1</span></div><div class="date privacyLabel" id="today"></div></div><div class="headerActions"><button class="roundAction" id="privacyBtn" data-ico="eye" title="Tutarları gizle"></button><div class="appmark" id="appMark"></div></div></header>
+<header class="iosHeader"><div><div class="brand">Finansım <span class="badge versionBadge">v6.1.1</span></div><div class="date privacyLabel" id="today"></div></div><div class="headerActions"><button class="roundAction" id="privacyBtn" data-ico="eye" title="Tutarları gizle"></button><div class="appmark" id="appMark"></div></div></header>
 <div class="tabs"><button class="tab active" data-tab="home">Özet</button><button class="tab" data-tab="cashflow">90 Gün</button><button class="tab" data-tab="lab">What-if</button><button class="tab" data-tab="strategy">Strateji</button><button class="tab" data-tab="wealth">Net Değer</button><button class="tab" data-tab="analytics">Analiz</button><button class="tab" data-tab="plan">Plan</button><button class="tab" data-tab="debts">Borçlar</button><button class="tab" data-tab="flow">Hareketler</button><button class="tab" data-tab="settings">Ayarlar</button></div>
 
 
